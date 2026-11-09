@@ -270,47 +270,47 @@ footer.dev { text-align: center; font-family: var(--num); font-weight: 600; font
   </defs>
 </svg>
 
-<template id="mascot-tpl">
-  <svg class="mascot" viewBox="0 0 120 120" data-mood="idle" aria-hidden="true">
-    <circle class="sk" cx="17" cy="66" r="9"/>
-    <circle class="sk" cx="103" cy="66" r="9"/>
-    <circle class="sk" cx="60" cy="64" r="44"/>
-    <path class="st" d="M57 22c-6-7 3-15 10-9"/>
-    <ellipse class="bl" cx="34" cy="78" rx="8" ry="5"/>
-    <ellipse class="bl" cx="86" cy="78" rx="8" ry="5"/>
-    <g class="p p-es"><path class="st" d="M36 62q6 6.5 12 0"/><path class="st" d="M72 62q6 6.5 12 0"/></g>
-    <g class="p p-eo"><circle class="fi" cx="42" cy="61" r="5.6"/><circle class="fi" cx="78" cy="61" r="5.6"/><circle class="sk" cx="44" cy="59" r="1.9"/><circle class="sk" cx="80" cy="59" r="1.9"/></g>
-    <g class="p p-ec"><path class="st" d="M36 56l11 5.5-11 5.5"/><path class="st" d="M84 56l-11 5.5 11 5.5"/></g>
-    <path class="p p-ms st" d="M52 83q8 7 16 0"/>
-    <ellipse class="p p-mo fi" cx="60" cy="86" rx="6" ry="7"/>
-    <path class="p p-mc fi" d="M47 93q13-19 26 0z"/>
-    <path class="p p-mf st" d="M52 87h16"/>
-    <path class="p p-mw st" d="M48 87q6-5 12 0t12 0"/>
-    <g class="p p-tr"><path class="tr" d="M40 69q-5 8 0 10.5q5-2.5 0-10.5z"/><path class="tr" d="M80 69q-5 8 0 10.5q5-2.5 0-10.5z"/></g>
-    <g class="p p-zz"><text class="zz" x="92" y="30" font-size="17">z</text><text class="zz" x="103" y="17" font-size="12">z</text></g>
-  </svg>
-</template>
 
 <div class="wrap">
   <header class="top">
     <div class="logo" data-mascot="idle"></div>
     <h1>宝宝哭声翻译器</h1>
-    <span class="priv"><svg class="ic"><use href="#i-lock"/></svg>声音不上传</span>
+    <span class="priv"><svg class="ic"><use href="#i-lock" xlink:href="#i-lock"/></svg>声音不上传</span>
   </header>
 
   <section class="hero" aria-labelledby="heroTitle">
+    <p class="notice" id="noJs">这个页面没有正常运行。请在手机浏览器（Safari、Chrome）里打开这个工具的网址，直接打开 html 文件是用不了的。</p>
     <p class="notice" id="inappNotice" hidden>在微信、抖音里直接打开可能用不了麦克风。点右上角「···」，选「在浏览器打开」。</p>
     <button class="listen" id="listenBtn" type="button" data-act="listen" aria-label="开始听宝宝哭声">
       <span class="ring"></span><span class="ring r2"></span>
-      <span data-mascot="idle" id="heroFace"></span>
+      <span data-mascot="idle" id="heroFace">
+    <svg class="mascot" viewBox="0 0 120 120" data-mood="idle" aria-hidden="true">
+      <circle class="sk" cx="17" cy="66" r="9"/>
+      <circle class="sk" cx="103" cy="66" r="9"/>
+      <circle class="sk" cx="60" cy="64" r="44"/>
+      <path class="st" d="M57 22c-6-7 3-15 10-9"/>
+      <ellipse class="bl" cx="34" cy="78" rx="8" ry="5"/>
+      <ellipse class="bl" cx="86" cy="78" rx="8" ry="5"/>
+      <g class="p p-es"><path class="st" d="M36 62q6 6.5 12 0"/><path class="st" d="M72 62q6 6.5 12 0"/></g>
+      <g class="p p-eo"><circle class="fi" cx="42" cy="61" r="5.6"/><circle class="fi" cx="78" cy="61" r="5.6"/><circle class="sk" cx="44" cy="59" r="1.9"/><circle class="sk" cx="80" cy="59" r="1.9"/></g>
+      <g class="p p-ec"><path class="st" d="M36 56l11 5.5-11 5.5"/><path class="st" d="M84 56l-11 5.5 11 5.5"/></g>
+      <path class="p p-ms st" d="M52 83q8 7 16 0"/>
+      <ellipse class="p p-mo fi" cx="60" cy="86" rx="6" ry="7"/>
+      <path class="p p-mc fi" d="M47 93q13-19 26 0z"/>
+      <path class="p p-mf st" d="M52 87h16"/>
+      <path class="p p-mw st" d="M48 87q6-5 12 0t12 0"/>
+      <g class="p p-tr"><path class="tr" d="M40 69q-5 8 0 10.5q5-2.5 0-10.5z"/><path class="tr" d="M80 69q-5 8 0 10.5q5-2.5 0-10.5z"/></g>
+      <g class="p p-zz"><text class="zz" x="92" y="30" font-size="17">z</text><text class="zz" x="103" y="17" font-size="12">z</text></g>
+    </svg>
+      </span>
     </button>
     <h2 class="hero-title" id="heroTitle">宝宝哭了？点一下，我来听听</h2>
     <p class="hero-sub" id="heroSub">手机离宝宝 30–50 厘米，听 8 秒就好</p>
     <div class="meter" id="meter" aria-hidden="true"></div>
     <div class="actions">
-      <label class="btn" for="fileInput"><svg class="ic"><use href="#i-upload"/></svg>上传录音</label>
+      <label class="btn" for="fileInput"><svg class="ic"><use href="#i-upload" xlink:href="#i-upload"/></svg>上传录音</label>
       <input type="file" id="fileInput" accept="audio/*,.m4a,.mp3,.wav,.aac,.caf,.ogg,.webm" hidden>
-      <button class="btn" type="button" data-act="demo"><svg class="ic"><use href="#i-play"/></svg>试听示例哭声</button>
+      <button class="btn" type="button" data-act="demo"><svg class="ic"><use href="#i-play" xlink:href="#i-play"/></svg>试听示例哭声</button>
     </div>
     <p class="notice" id="notice" hidden></p>
     <p class="status" id="status" aria-live="polite"><span class="pbar"><b id="pbar"></b></span><span id="statusText">小耳朵准备中…</span></p>
@@ -322,9 +322,9 @@ footer.dev { text-align: center; font-family: var(--num); font-weight: 600; font
       <p class="hint">记一下，猜得更准</p>
     </div>
     <div class="log-grid">
-      <button class="tile t-feed" type="button" data-act="log" data-k="feed"><svg class="ic"><use href="#i-bottle"/></svg><span class="lb">上次喂奶</span><span class="val" id="v-feed"></span></button>
-      <button class="tile t-wake" type="button" data-act="log" data-k="wake"><svg class="ic"><use href="#i-moon"/></svg><span class="lb">上次睡醒</span><span class="val" id="v-wake"></span></button>
-      <button class="tile t-diaper" type="button" data-act="log" data-k="diaper"><svg class="ic"><use href="#i-diaper"/></svg><span class="lb">换尿布</span><span class="val" id="v-diaper"></span></button>
+      <button class="tile t-feed" type="button" data-act="log" data-k="feed"><svg class="ic"><use href="#i-bottle" xlink:href="#i-bottle"/></svg><span class="lb">上次喂奶</span><span class="val" id="v-feed"></span></button>
+      <button class="tile t-wake" type="button" data-act="log" data-k="wake"><svg class="ic"><use href="#i-moon" xlink:href="#i-moon"/></svg><span class="lb">上次睡醒</span><span class="val" id="v-wake"></span></button>
+      <button class="tile t-diaper" type="button" data-act="log" data-k="diaper"><svg class="ic"><use href="#i-diaper" xlink:href="#i-diaper"/></svg><span class="lb">换尿布</span><span class="val" id="v-diaper"></span></button>
     </div>
     <div class="age">
       <span id="ageLabel">宝宝多大</span>
@@ -340,7 +340,7 @@ footer.dev { text-align: center; font-family: var(--num); font-weight: 600; font
   <section class="card" id="result" aria-live="polite" aria-label="分析结果"></section>
 
   <section class="card flags" aria-labelledby="flagTitle">
-    <h2 id="flagTitle"><svg class="ic"><use href="#i-cross"/></svg>这些情况别等，直接看医生</h2>
+    <h2 id="flagTitle"><svg class="ic"><use href="#i-cross" xlink:href="#i-cross"/></svg>这些情况别等，直接看医生</h2>
     <ul>
       <li>3 个月以内的宝宝发烧，体温到 38°C 或更高</li>
       <li>哭声特别尖、像很疼；或者哭声很弱、没精神、叫不醒</li>
@@ -361,7 +361,7 @@ footer.dev { text-align: center; font-family: var(--num); font-weight: 600; font
   </section>
 
   <section class="terms" aria-labelledby="termsTitle">
-    <div class="terms-h"><svg class="ic"><use href="#i-shield"/></svg><h2 id="termsTitle">免责声明</h2></div>
+    <div class="terms-h"><svg class="ic"><use href="#i-shield" xlink:href="#i-shield"/></svg><h2 id="termsTitle">免责声明</h2></div>
     <p class="lead">本系统免费开源，仅用于帮助宝爸宝妈缓解带娃的困扰。未经作者许可，禁止任何形式的商业使用，侵权必究。</p>
     <ul>
       <li>分析结果仅供参考，不能代替专业人士的建议。宝宝情况紧急时，请马上就医。</li>
@@ -871,14 +871,14 @@ var CRY = (function () {
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
   /* --- 小团子 --- */
-  var tpl = $('mascot-tpl');
+  $('noJs').hidden = true;
+  var heroFace = $('heroFace').querySelector('svg');
   function mascot(mood) {
-    var svg = tpl.content.firstElementChild.cloneNode(true);
+    var svg = heroFace.cloneNode(true);
     svg.setAttribute('data-mood', mood || 'idle');
     return svg;
   }
-  Array.prototype.forEach.call(document.querySelectorAll('[data-mascot]'), function (el) { el.appendChild(mascot(el.getAttribute('data-mascot'))); });
-  var heroFace = $('heroFace').firstElementChild;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-mascot]'), function (el) { if (!el.querySelector('svg')) el.appendChild(mascot(el.getAttribute('data-mascot'))); });
   function setMood(m) { heroFace.setAttribute('data-mood', m); }
 
   /* --- 音量条 --- */
@@ -922,10 +922,18 @@ var CRY = (function () {
     }
     throw new Error('TF.js 加载失败');
   }
+  // 直接打开本地 html 文件时，浏览器不让页面读同目录的模型文件
+  var IS_FILE = location.protocol === 'file:';
+  var FILE_MSG = '你现在是直接打开的 html 文件，读不到识别模型和示例哭声。请把整个文件夹放到网站上（比如 GitHub Pages），再用手机浏览器打开那个网址。';
   var engine = null, enginePromise = null;
   function ensureEngine() {
     if (engine) return Promise.resolve(engine);
     if (enginePromise) return enginePromise;
+    if (IS_FILE) {
+      setStatus('需要用网址打开才能用', 0, true);
+      showNotice(FILE_MSG);
+      return Promise.reject(new Error(FILE_MSG));
+    }
     setStatus('小耳朵准备中…', 0.05);
     enginePromise = loadTf().then(function (tf) {
       setStatus('正在下载识别模型（3.8MB）…', 0.15);
@@ -1062,7 +1070,7 @@ var CRY = (function () {
     } catch (e) {
       setMood('idle');
       setHero('这次没分析成功', '可以再点一下试试');
-      showNotice('分析出错了：' + (e && e.message ? e.message : '未知原因') + '。换个浏览器或者刷新页面再试。');
+      showNotice(IS_FILE ? FILE_MSG : '分析出错了：' + (e && e.message ? e.message : '未知原因') + '。换个浏览器或者刷新页面再试。');
     } finally {
       setBusy(false);
     }
@@ -1074,6 +1082,7 @@ var CRY = (function () {
       return;
     }
     if (busy) return;
+    if (IS_FILE) { showNotice(FILE_MSG); return; }
     showNotice('');
     ensureEngine().catch(function () {});
     var got;
@@ -1106,6 +1115,7 @@ var CRY = (function () {
   var demoAudio = null;
   async function onDemo() {
     if (busy || rec) return;
+    if (IS_FILE) { showNotice(FILE_MSG); return; }
     showNotice('');
     setBusy(true);
     setMood('cry');
@@ -1153,7 +1163,7 @@ var CRY = (function () {
   });
 
   /* --- 渲染结果 --- */
-  function icon(id) { return '<svg class="ic"><use href="#' + id + '"/></svg>'; }
+  function icon(id) { return '<svg class="ic"><use href="#' + id + '" xlink:href="#' + id + '"/></svg>'; }
   function fmtTime(d) {
     function p2(v) { return (v < 10 ? '0' : '') + v; }
     return (d.getMonth() + 1) + '-' + p2(d.getDate()) + ' ' + p2(d.getHours()) + ':' + p2(d.getMinutes());
